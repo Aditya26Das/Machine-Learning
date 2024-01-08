@@ -1,13 +1,15 @@
-create database if not exists xyz;
+create database if not exists college;
 
-use xyz;
-create table employee(
-id int primary key,
+use college;
+create table student(
+rollno int primary key,
 name varchar(255) not null,
-salary int not null
+marks int not null,
+grade varchar(255),
+city varchar(255)
 );
 
-insert into employee (id,name,salary)
-values(1,"Adam",25000),(2,"Bob",30000),(3,"Cassey",40000);
+insert into student(rollno,name,marks,grade,city)
+values(101,"Anil",78,"C","Pune"),(102,"Bhumika",93,"A","Mumbai"),(103,"Chetan",85,"B","Mumbai"),(104,"Dhruv",96,"A","Delhi"),(105,"Emanuel",12,"F","Delhi"),(106,"Farah",82,"B","Delhi");
 
-select * from employee
+select * from student;
